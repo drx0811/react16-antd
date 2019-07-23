@@ -1,0 +1,25 @@
+{
+  "success":true,
+  "errorCode":"",
+  "errorMsg":"",
+  "data":[
+	{
+	  "menuName":"全部资料",
+	  "menuUrl":"2"
+	},{
+	  "menuName":"自来",
+	  "menuUrl":"3",
+	  "subMenuList":[
+		{
+		  "menuName":"机构资产库",
+		  "menuUrl":"21"
+		},
+		{
+		  "menuName":"被拒资产库",
+		  "menuUrl":"22"
+		}
+	  ]
+	}
+  ]
+}
+

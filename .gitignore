@@ -1,0 +1,11 @@
+
+node_modules/***
+app/node_modules/***
+node_modules/_uuid@3.3.2@uuid/***
+node_modules/***
+node_modules/.bin/uuid
+logs/***
+.idea/
+npm-debug.log*
+.DS_Store
+debug.log

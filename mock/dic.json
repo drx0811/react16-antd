@@ -1,0 +1,72 @@
+{
+  "success": true,
+  "errorCode": "",
+  "errorMsg": "",
+  "data": {
+	"realLoanBalance": "3500.00",
+	"realRepayType": "等额本息",
+	"realInterestType": "到期还本付息",
+	"orderContractList": [
+	  {
+		"contract": [
+		  {
+			"contractName": "信呗极速贷",
+			"signUrl": "https://mapi.linksign.cn/m/ZPYiBnGVK6Kqm5b",
+			"signStatus": "2",
+			"type": "0"
+		  },
+		  {
+			"contractName": "电子借款借据",
+			"signUrl": "",
+			"signStatus": "1",
+			"type": "2"
+		  }
+		],
+		"name": "借款人徐祥",
+		"ids": "4218"
+	  },
+	  {
+		"contract": [
+		  {
+			"contractName": "信呗极速贷",
+			"signUrl": "https://mapi.linksign.cn/m/ZPYiBnGVK6Kqm5b",
+			"signStatus": "2",
+			"type": "0"
+		  },
+		  {
+			"contractName": "电子借款借据",
+			"signUrl": "",
+			"signStatus": "1",
+			"type": "2"
+		  }
+		],
+		"name": "借款人徐祥",
+		"ids": "4218"
+	  },
+	  {
+		"contract": [
+		  {
+			"contractName": "信呗极速贷",
+			"signUrl": "https://mapi.linksign.cn/m/ZPYiBnGVK6Kqm5b",
+			"signStatus": "2",
+			"type": "0"
+		  },
+		  {
+			"contractName": "电子借款借据",
+			"signUrl": "",
+			"signStatus": "1",
+			"type": "2"
+		  }
+		],
+		"name": "借款人徐祥",
+		"ids": "4218"
+	  }
+	],
+	"realLoanBalanceUnit": "元",
+	"realPeriod": "6.00个月",
+	"realInterestRate": "2.50%/月",
+	"isCreditResult": "1",
+	"bannerStatus": "2",
+	"applyStatus": "7"
+  }
+}
