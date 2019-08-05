@@ -13,6 +13,7 @@ function hasErrors(fieldsError) {
 class HorizontalLoginForm extends React.Component {
     componentDidMount() {
         this.props.form.validateFields();//1，获取表单数据的方法自动执行，去判断所有输入框
+        console.log(this.props.location.state)
     }
     handleSubmit = (e) => {
         e.preventDefault();

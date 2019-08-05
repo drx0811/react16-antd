@@ -23,10 +23,20 @@ export default class Funs extends React.Component{
       <div style={{color:"green"}}>测试时2</div>
     )
   }
+  getInfo=()=>{
+    this.props.router.push({
+      pathname: 'button_disabled',
+      state: {
+        name:"name",
+        age:12,
+        sex:'男',
+      },
+    })
+  }
   render() {
     const {isnum}=this.state;
     return(
-      <div>
+      <div onClick={()=>{this.getInfo()}}>
         {
           {
             '1':this.get1(1),
