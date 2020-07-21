@@ -39,10 +39,16 @@ const Funs = (location, cb) => {     // 按需加载富登入页面
 		cb(null, require('pages/react16/funst').default);
 	}, 'Funs');
 };
+const NewList = (location, cb) => {     // 按需加载富登入页面
+	require.ensure([], require => {
+		cb(null, require('pages/react16/newList').default);
+	}, 'NewList');
+};
 
 ReactDOM.render(
     <Provider store={store}>
         <Router history={hashHistory} >
+            <Route path="newlist" getComponent={NewList} />
             <Route path="funstions" getComponent={Funs} />
             <Route path="button_disabled" getComponent={button_disabled} />
             <Route path="wrappedRegistrationForm" getComponent={WrappedRegistrationForm} />

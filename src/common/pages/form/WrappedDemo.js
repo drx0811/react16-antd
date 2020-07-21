@@ -32,7 +32,7 @@ class PriceInput extends React.Component {
             return;
         }
         if (!('value' in this.props)) {
-            this.setState({ number },function () {
+            this.setState({ number }, function () {
                 console.log(this.state.number)
             });
         }
@@ -59,23 +59,23 @@ class PriceInput extends React.Component {
         const state = this.state;
         return (
             <span>
-            <Input
-                type="text"
-                size={size}
-                value={state.number}
-                onChange={this.handleNumberChange}
-                style={{ width: '65%', marginRight: '3%' }}
-            />
-        <Select
-            value={state.currency}
-            size={size}
-            style={{ width: '32%' }}
-            onChange={this.handleCurrencyChange}
-        >
-          <Option value="rmb">RMB</Option>
-          <Option value="dollar">Dollar</Option>
-        </Select>
-      </span>
+                <Input
+                    type="text"
+                    size={size}
+                    value={state.number}
+                    onChange={this.handleNumberChange}
+                    style={{ width: '65%', marginRight: '3%' }}
+                />
+                <Select
+                    value={state.currency}
+                    size={size}
+                    style={{ width: '32%' }}
+                    onChange={this.handleCurrencyChange}
+                >
+                    <Option value="rmb">RMB</Option>
+                    <Option value="dollar">Dollar</Option>
+                </Select>
+            </span>
         );
     }
 }
@@ -105,8 +105,14 @@ class Demo extends React.Component {
                 <Form.Item label="Price">
                     {getFieldDecorator('price', {
                         initialValue: { number: 0, currency: 'rmb' },
-                        rules: [{ validator: this.checkPrice }],
-                    })(<PriceInput />)}
+                        rules: [
+                            {
+                                validator: this.checkPrice
+                            }
+                        ],
+                    })
+                        (<PriceInput />)
+                    }
                 </Form.Item>
                 <Form.Item>
                     <Button type="primary" htmlType="submit">Submit</Button>
