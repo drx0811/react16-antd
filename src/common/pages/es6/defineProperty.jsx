@@ -10,9 +10,17 @@ export default class DefineProperty extends React.Component{
     const bos={
       name: {height:1111}
     };
+    let oldProto=Array.prototype;
+    let newProto=Object.create(oldProto);
+    ['push','shift'].forEach(item=>{
+      oldProto[item].apply(this,arguments);
+    })
     function observe(value) {
       if (typeof value !=="object") {
         return value;
+      }
+      if (Array.isArray(value)) {
+        return value.__proto__=newProto;
       }
       for (let keys in value){
         definedFun(value,keys,value[keys]);
@@ -33,11 +41,17 @@ export default class DefineProperty extends React.Component{
         }
       })
     }
-    observe(bos);
+    // observe(bos);
     // bos.name=1000;
     // bos.name.height=111;
-    bos.name={height: 2000};
+    // bos.name={height: 2000};
     // bos.name.height=3000;
+    let arr=[];
+    observe(arr);
+    arr.push(111);
+    console.log(arr);
+
+
   }
 
   render() {

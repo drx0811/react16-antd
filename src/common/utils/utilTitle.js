@@ -135,13 +135,6 @@ export const  Utilities ={
     //         case 7:return "放款成功";
     //     }
     // },
-    getReportType(val){
-        switch (val){
-            case 1:return "贷前";
-            case 2:return "贷中";
-            case 3:return "贷后";
-        }
-    },
     getReportCat(val){
         switch (val){
             case 1:return "个人";
