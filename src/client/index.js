@@ -14,10 +14,22 @@ const ProxyObj = (location, cb) => {     // 按需加载富登入页面
 		cb(null, require('pages/es6/proxyObj').default);
 	}, 'NewList');
 };
+const Promise = (location, cb) => {     // 按需加载富登入页面
+	require.ensure([], require => {
+		cb(null, require('pages/es6/promise').default);
+	}, 'Promise');
+};
+const HocFunc = (location, cb) => {     // 按需加载富登入页面
+	require.ensure([], require => {
+		cb(null, require('pages/es6/hocFunc').default);
+	}, 'HocFunc');
+};
 
 ReactDOM.render(
     <Provider store={store}>
         <Router history={hashHistory} >
+            <Route path="hocFunc" getComponent={HocFunc} />
+            <Route path="promise" getComponent={Promise} />
             <Route path="defineProperty" getComponent={DefineProperty} />
             <Route path="proxyObj" getComponent={ProxyObj} />
         </Router>
