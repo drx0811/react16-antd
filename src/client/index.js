@@ -40,10 +40,16 @@ const Observer = (location, cb) => {     // 按需加载富登入页面
 		cb(null, require('pages/es6/Observer').default);
 	}, 'Observer');
 };
+const PromiseClass = (location, cb) => {     // 按需加载富登入页面
+	require.ensure([], require => {
+		cb(null, require('pages/es6/PromiseClass').default);
+	}, 'PromiseClass');
+};
 
 ReactDOM.render(
     <Provider store={store}>
         <Router history={hashHistory} >
+            <Route path="PromiseClass" getComponent={PromiseClass} />
             <Route path="Observer" getComponent={Observer} />
             <Route path="EmitOn" getComponent={EmitOn} />
             <Route path="keLiHua" getComponent={KeLiHua} />

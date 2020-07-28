@@ -3,7 +3,6 @@ export default class ObserverObj extends React.Component{
   constructor(props) {
     super(props);
   }
-
   render() {
     return (
       <div>
@@ -11,7 +10,6 @@ export default class ObserverObj extends React.Component{
       </div>
     );
   }
-
 }
 class Observer {
   constructor(name) {
