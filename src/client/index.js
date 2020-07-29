@@ -45,10 +45,22 @@ const PromiseClass = (location, cb) => {     // 按需加载富登入页面
 		cb(null, require('pages/es6/PromiseClass').default);
 	}, 'PromiseClass');
 };
+const DebounceFunc = (location, cb) => {     // 按需加载富登入页面
+	require.ensure([], require => {
+		cb(null, require('pages/es6/DebounceFunc').default);
+	}, 'DebounceFunc');
+};
+const ThrottleFunc = (location, cb) => {     // 按需加载富登入页面
+	require.ensure([], require => {
+		cb(null, require('pages/es6/ThrottleFunc').default);
+	}, 'ThrottleFunc');
+};
 
 ReactDOM.render(
     <Provider store={store}>
         <Router history={hashHistory} >
+            <Route path="ThrottleFunc" getComponent={ThrottleFunc} />
+            <Route path="DebounceFunc" getComponent={DebounceFunc} />
             <Route path="PromiseClass" getComponent={PromiseClass} />
             <Route path="Observer" getComponent={Observer} />
             <Route path="EmitOn" getComponent={EmitOn} />
