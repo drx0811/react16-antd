@@ -55,10 +55,16 @@ const ThrottleFunc = (location, cb) => {     // 按需加载富登入页面
 		cb(null, require('pages/es6/ThrottleFunc').default);
 	}, 'ThrottleFunc');
 };
+const CssAction = (location, cb) => {     // 按需加载富登入页面
+	require.ensure([], require => {
+		cb(null, require('pages/css3/CssAction').default);
+	}, 'CssAction');
+};
 
 ReactDOM.render(
     <Provider store={store}>
         <Router history={hashHistory} >
+            <Route path="CssAction" getComponent={CssAction} />
             <Route path="ThrottleFunc" getComponent={ThrottleFunc} />
             <Route path="DebounceFunc" getComponent={DebounceFunc} />
             <Route path="PromiseClass" getComponent={PromiseClass} />
