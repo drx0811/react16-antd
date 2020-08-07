@@ -60,10 +60,22 @@ const CssAction = (location, cb) => {     // 按需加载富登入页面
 		cb(null, require('pages/css3/CssAction').default);
 	}, 'CssAction');
 };
+const Object_create = (location, cb) => {     // 按需加载富登入页面
+	require.ensure([], require => {
+		cb(null, require('pages/es6/Object_create').default);
+	}, 'Object_create');
+};
+const ImgLasyLoad = (location, cb) => {     // 按需加载富登入页面
+	require.ensure([], require => {
+		cb(null, require('pages/utils/ImgLasyLoad').default);
+	}, 'ImgLasyLoad');
+};
 
 ReactDOM.render(
     <Provider store={store}>
         <Router history={hashHistory} >
+            <Route path="ImgLasyLoad" getComponent={ImgLasyLoad} />
+            <Route path="Object_create" getComponent={Object_create} />
             <Route path="CssAction" getComponent={CssAction} />
             <Route path="ThrottleFunc" getComponent={ThrottleFunc} />
             <Route path="DebounceFunc" getComponent={DebounceFunc} />

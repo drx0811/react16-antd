@@ -4,7 +4,8 @@ export default class DebounceFunc extends React.Component{
     super(props);
   }
   componentDidMount() {
-    //  setTimeOut 里面第一个函数都是自执行函数，
+    //  setTimeOut 里面第一个函数都是自执行函数，防抖；
+    //  防抖：不管触发多少次，函数总会在触发最后一次结束后的固定间隔后执行；定时器要清理；
     function debounce(fn, wait=2000,immediate=true) {
       var timeout = null;
       var result = null;
