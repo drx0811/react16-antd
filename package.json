@@ -12,7 +12,7 @@
     "classnames": "^2.2.5",
     "history": "^4.6.3",
     "less": "^2.7.2",
-    "moment": "^2.18.1",
+    "moment": "^2.29.4",
     "react": "^16.13.1",
     "react-beautiful-dnd": "^3.0.0",
     "react-dom": "^16.6.3",
